@@ -1,0 +1,123 @@
+$button_bg_color: linear-gradient(90deg, #3388f6 2.85%, #96c6fa 100%);
+$CureMD_blue_color: #0056b3;
+$CureMD-bg-color: #fafafa;
+
+.footer-section {
+    background-color: #333333;
+
+    .heading {
+        color: #999896;
+        font-size: 20px;
+    }
+
+    .underlink{
+        width: 23px;
+        height: 3px;
+        background-color: #bdbdbd;
+    }
+
+    .items {
+        ul {
+            color: white;
+            list-style-type: none;
+            padding: 0;
+
+            li {
+                text-decoration: none;
+                margin-bottom: 3px;
+            }
+        }
+    }
+
+    .buttons {
+        .footer-no1 {
+            background-color: #0088ca;
+            color: white;
+            font-size: 12px;
+            padding: 5px 15px;
+            border-radius: 3px;
+        }
+
+        .footer-no2 {
+            background-color: white;
+            color: #020202;
+            font-size: 12px;
+            padding: 5px 15px;
+            border-radius: 3px;
+            font-weight: 400;
+        }
+    }
+
+    .details {
+        display: flex;
+        justify-content: start;
+        align-items: start;
+        gap: 10px;
+
+        .detail-field {
+            .field {
+                padding: 2px 10px;
+                border-radius: 4px;
+                font-size: 14px;
+                width: 300px;
+                border-color: transparent;
+            }
+        }
+
+        .footer-no1 {
+            width: 300px;
+            font-weight: bold;
+            font-size: 14px;
+            border: 1px solid #319fe1 !important;
+        }
+    }
+    .image-1{
+        position: relative;
+        bottom: 50px;
+        img{
+            width: 130px;
+        }
+    }
+    .sub-heading{
+        color: white;
+        font-size: 11px;
+    }
+
+    .borders{
+        border-top: 1px solid #454545;
+    }
+
+    .central-borders{
+        border-left: 1px solid #454545;
+        border-right: 1px solid #454545;
+        height: 170px;
+    }
+
+    .container-fluid{
+        background-color: #2b2b2b;
+        color: white;
+        font-size: 12px;
+        .terms{
+            display: flex;
+            justify-content: space-between;
+            gap: 20px;
+        }
+    }
+}
+
+@media only screen and (max-width: 1300px){
+    .footer-section{
+        .details{
+            .detail-field{
+                .field{
+                    width: 100px !important;
+                }
+            }
+            .buttons{
+                .footer-no1{
+                    width: 150px !important;
+                }
+            }
+        }
+    }
+}

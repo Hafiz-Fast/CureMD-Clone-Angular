@@ -1,0 +1,71 @@
+$button_bg_color: linear-gradient(90deg, #3388f6 2.85%, #96c6fa 100%);
+$CureMD_blue_color: #0056b3;
+$CureMD-bg-color: #fafafa;
+
+.impacts-section {
+    .title {
+        display: flex;
+        justify-content: center;
+        align-content: center;
+
+        .custom-h2 {
+            width: 30%;
+        }
+    }
+
+    .card {
+        background-color: #fbfbfb;
+        border: 1px solid #f0f0f0;
+        border-radius: 24px;
+        position: relative;
+        transition: 0.4s ease;
+        overflow: hidden;
+        height: 255px;
+
+        .card-text {
+            font-family: "Poppins", sans-serif;
+            font-weight: 500;
+
+            span {
+                color: $CureMD_blue_color;
+            }
+        }
+
+        .card-chart.img1 {
+            position: relative;
+            right: 20%;
+        }
+
+        .card-chart.img2 {
+            position: relative;
+            left: 25%;
+            bottom: 20%;
+        }
+    }
+
+    .layer1 {
+        .card:hover {
+            height: 300px;
+            border: 1px solid $CureMD_blue_color;
+        }
+    }
+
+    .layer2 {
+        .card:hover {
+            transform: translateY(-40px);
+            height: 300px;
+            border: 1px solid $CureMD_blue_color;
+        }
+    }
+}
+
+.impacts-animation {
+    opacity: 0;
+    transition: opacity 2s ease, transform 2s ease;
+    transform: translateY(100px);
+}
+
+.impacts-animation.show {
+    opacity: 1;
+    transform: translateY(0);
+}

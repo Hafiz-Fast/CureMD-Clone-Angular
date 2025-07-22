@@ -1,0 +1,28 @@
+nav {
+    .container {
+        .nav-link {
+            font-size: 16px;
+            line-height: 24px !important;
+            font-family: 'Open Sans', sans-serif;
+            color: black;
+        }
+
+        .btn.Custom {
+            font-weight: 700;
+            color: #fff;
+            background-color: #ff9c25;
+            border-color: #ff9c25;
+            font-size: 14px;
+            line-height: 20px;
+            padding: 8px 20px 7px;
+            margin-top: -1px;
+            margin-bottom: 0;
+            margin-left: 0;
+            margin-right: 0;
+            border-radius: 6px;
+            cursor: pointer;
+            animation: pulse 2s infinite 3s cubic-bezier(0.25, 0, 0, 1);
+            box-shadow: 0 0 0 0 #ff9c25;
+        }
+    }
+}

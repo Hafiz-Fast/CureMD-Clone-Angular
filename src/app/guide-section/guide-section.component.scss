@@ -1,0 +1,92 @@
+$button_bg_color: linear-gradient(90deg, #3388f6 2.85%, #96c6fa 100%);
+$CureMD_blue_color: #0056b3;
+$CureMD-bg-color: #fafafa;
+
+.guide-section {
+    background-color: $CureMD-bg-color;
+    position: relative;
+    top: 60px;
+
+    .AnimationLeft {
+        opacity: 0;
+        transition: opacity 2s ease, transform 2s ease;
+        transform: translateX(100px);
+    }
+
+    .AnimationRight {
+        opacity: 0;
+        transition: opacity 2s ease, transform 2s ease;
+        transform: translateX(-100px);
+    }
+
+    .AnimationLeft.show {
+        opacity: 1;
+        transform: translateX(0);
+    }
+
+    .AnimationRight.show {
+        opacity: 1;
+        transform: translateX(0);
+    }
+
+    .guide-image {
+        height: 0;
+        overflow: hidden;
+        transition: height 0.5s ease;
+    }
+
+    .guide-image.select {
+        height: auto;
+    }
+
+
+    .column {
+        display: flex;
+        flex-direction: column;
+        justify-content: start;
+        align-items: start;
+
+        .description {
+            font-size: 19px;
+            line-height: 28px;
+        }
+
+        .detail {
+            font-size: 28px;
+            font-weight: 400;
+            color: #707070;
+            cursor: pointer;
+            transition: color 0.5s ease;
+            display: flex;
+            justify-content: start;
+            align-items: start;
+            gap: 30px;
+
+            .words {
+                display: flex;
+                flex-direction: column;
+                align-items: start;
+                gap: 10px;
+            }
+        }
+
+        .detail.select {
+            .number {
+                color: $CureMD_blue_color
+            }
+
+            .heading {
+                color: $CureMD_blue_color
+            }
+        }
+
+        .detail:hover {
+            font-weight: 500;
+
+            .heading {
+                color: $CureMD_blue_color;
+            }
+        }
+
+    }
+}

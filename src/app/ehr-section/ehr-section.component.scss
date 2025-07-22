@@ -1,0 +1,66 @@
+.EHR-section {
+    background-color: #0d121f;
+    color: white;
+
+    .title {
+        h2 {
+            font-weight: 500;
+        }
+    }
+
+    .description {
+        font-size: 20px;
+        font-weight: 400;
+        line-height: 28px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        padding: 0 32%;
+    }
+
+    .ponits-wraper {
+        .points {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 5%;
+            font-size: 16px;
+            font-weight: 400;
+        }
+    }
+
+    .phone-image {
+        z-index: 1;
+
+        img {
+            position: absolute;
+            left: 75%;
+            bottom: 5%;
+        }
+    }
+
+    .button-square {
+        display: flex;
+        justify-content: center;
+        margin-top: 30px;
+    }
+}
+
+.EHR-Animation {
+    opacity: 0;
+    transition: opacity 2s ease, transform 2s ease;
+    transform: translateY(100px);
+}
+
+.EHR-Animation.show {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+@media only screen and (max-width: 1300px){
+    .EHR-section{
+        .phone-image{
+            display: none;
+        }
+    }
+}

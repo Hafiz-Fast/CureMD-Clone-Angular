@@ -1,0 +1,106 @@
+$button_bg_color: linear-gradient(90deg, #3388f6 2.85%, #96c6fa 100%);
+$CureMD_blue_color: #0056b3;
+$CureMD-bg-color: #fafafa;
+
+.FAQ-section {
+    .row {
+        .item {
+            padding-top: 30px;
+            padding-left: 40px;
+            padding-right: 40px;
+            background-color: transparent;
+            border-radius: 20px;
+            border: 1px solid #f0f0f0;
+
+            .question {
+                cursor: pointer;
+
+                .icon {
+                    font-size: 25px;
+                    background-color: #ebebeb;
+                    border-color: #ebebeb;
+                    color: white;
+                    width: 25px;
+                    height: 25px;
+                    border-radius: 22px;
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                }
+
+                .icon.active {
+                    background-color: $CureMD_blue_color;
+                    border-color: $CureMD_blue_color;
+                    padding-left: 2px;
+                }
+            }
+
+            .answer {
+                height: 0;
+                overflow: hidden;
+                opacity: 0;
+                transition: max-height 0.6s cubic-bezier(0.4, 0, 0.2, 1), opacity 0.5s ease;
+            }
+
+            .answer.active {
+                height: auto;
+                opacity: 1;
+            }
+        }
+
+        .item.active {
+            background-color: #f1f7ff;
+        }
+
+        .item.active:hover {
+            background-color: #f1f7ff;
+        }
+
+        .item:hover {
+            background-color: #f0f0f0;
+        }
+
+        .item.Extra {
+            height: 0;
+            overflow: hidden;
+            opacity: 0;
+            display: none;
+            transition: max-height 0.6s cubic-bezier(0.4, 0, 0.2, 1), opacity 0.5s ease;
+        }
+
+        .item.Extra.active2 {
+            height: auto;
+            opacity: 1;
+            display: block;
+        }
+
+        .Extender1 {
+            color: $CureMD_blue_color;
+            cursor: pointer;
+            opacity: 1;
+            display: block;
+        }
+
+        .Extender1.active2 {
+            height: 0;
+            overflow: hidden;
+            opacity: 0;
+            display: none;
+        }
+
+        .Extender2 {
+            height: 0;
+            overflow: hidden;
+            opacity: 0;
+            display: none;
+        }
+
+        .Extender2.active2 {
+            height: auto;
+            display: block;
+            color: $CureMD_blue_color;
+            cursor: pointer;
+            opacity: 1;
+        }
+    }
+}

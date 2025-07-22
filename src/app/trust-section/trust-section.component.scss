@@ -1,0 +1,102 @@
+$button_bg_color: linear-gradient(90deg, #3388f6 2.85%, #96c6fa 100%);
+$CureMD_blue_color: #0056b3;
+$CureMD-bg-color: #fafafa;
+
+.trust-section {
+    .carousel-inner {
+        position: relative;
+        border-radius: 10px;
+        background-color: $CureMD-bg-color;
+        overflow: hidden;
+        min-height: 350px;
+
+        &::before {
+            content: '';
+            position: absolute;
+            inset: 0;
+            border-radius: 10px;
+            background: linear-gradient(to right,
+                    transparent 0%,
+                    $CureMD_blue_color 40%,
+                    $CureMD_blue_color 60%,
+                    transparent 100%);
+            background-size: 300% 100%;
+            animation: moveStroke 4s linear infinite;
+
+            // restrict it to a thin frame around the box
+            mask:
+                linear-gradient(#fff 0 0) content-box,
+                linear-gradient(#fff 0 0);
+            -webkit-mask:
+                linear-gradient(#fff 0 0) content-box,
+                linear-gradient(#fff 0 0);
+            mask-composite: exclude;
+            -webkit-mask-composite: destination-out;
+            box-sizing: border-box;
+            padding: 2px;
+            pointer-events: none;
+            z-index: 1;
+        }
+
+        .heading {
+            max-width: 70%;
+            line-height: 32px;
+            font-size: 24px;
+            color: #313131;
+            margin-left: auto;
+            margin-right: auto;
+            font-weight: 500;
+        }
+
+        .description {
+            color: #313131;
+            font-size: 16px;
+            font-weight: 400;
+            line-height: 26px;
+            margin-left: auto;
+            margin-right: auto;
+            max-width: 80%;
+        }
+
+        .Name {
+            font-weight: 700;
+            line-height: 20px;
+            font-size: 16px;
+        }
+    }
+
+    .carousel-indicators [data-bs-target] {
+        width: 12px;
+        height: 12px;
+        border-radius: 50%;
+        background-color: #888;
+        opacity: 1;
+        margin-right: 6px;
+        margin-left: 6px;
+        margin-bottom: 5%;
+        position: relative;
+        top: 20px;
+    }
+
+    .carousel-indicators .active {
+        border-radius: 20px;
+        width: 2px;
+        height: 1px;
+        padding: 6px 10px;
+        display: inline-block;
+        border: 1px solid rgba(255, 255, 255, 0.4);
+        background: $CureMD_blue_color;
+        color: white;
+        margin-top: 8px;
+    }
+}
+
+@keyframes moveStroke {
+    0% {
+        background-position: 0% 0;
+    }
+
+    100% {
+        background-position: 300% 0;
+    }
+}

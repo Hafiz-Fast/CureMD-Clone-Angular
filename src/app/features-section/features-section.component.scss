@@ -1,0 +1,111 @@
+$button_bg_color: linear-gradient(90deg, #3388f6 2.85%, #96c6fa 100%);
+$CureMD_blue_color: #0056b3;
+$CureMD-bg-color: #fafafa;
+.features-section {
+    background-color: $CureMD-bg-color;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    .features-left-animation {
+        opacity: 0;
+        transition: opacity 2s ease, transform 2s ease;
+        transform: translateX(-100px);
+    }
+
+    .features-right-animation {
+        opacity: 0;
+        transition: opacity 2s ease, transform 2s ease;
+        transform: translateX(+100px);
+    }
+
+    .features-left-animation.show {
+        opacity: 1;
+        transform: translateX(0);
+    }
+
+    .features-right-animation.show {
+        opacity: 1;
+        transform: translateX(0);
+    }
+
+    .title {
+        width: 52%;
+    }
+
+    .feature {
+        display: flex;
+        align-items: start;
+        justify-content: start;
+        gap: 7%;
+        color: #707070;
+
+        svg {
+            margin-top: 6px;
+            flex-shrink: 0;
+            align-self: flex-start;
+
+            path {
+                fill: #707070;
+            }
+        }
+
+        .description {
+            display: flex;
+            flex-direction: column;
+            justify-content: start;
+            cursor: pointer;
+
+            .heading {
+                font-size: 24px;
+                font-weight: 500;
+            }
+
+            .subheading {
+                max-height: 0;
+                opacity: 0;
+                overflow: hidden;
+                font-size: 16px;
+                font-weight: 400;
+                line-height: 25px;
+                color: #000;
+                transition: max-height 0.6s cubic-bezier(0.4, 0, 0.2, 1), opacity 0.4s ease;
+            }
+        }
+    }
+
+    .feature.active {
+        .subheading {
+            max-height: 500px;
+            opacity: 1;
+        }
+
+        svg {
+            path {
+                fill: $CureMD_blue_color;
+            }
+        }
+
+        .heading {
+            color: $CureMD_blue_color;
+        }
+    }
+
+    .feature-image {
+        width: 0;
+        height: 0;
+        display: none;
+    }
+
+    .feature-image.active {
+        background-color: #f1f7ff;
+        border-radius: 30px;
+        height: 100%;
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+}
