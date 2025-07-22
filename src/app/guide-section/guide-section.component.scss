@@ -1,6 +1,4 @@
-$button_bg_color: linear-gradient(90deg, #3388f6 2.85%, #96c6fa 100%);
-$CureMD_blue_color: #0056b3;
-$CureMD-bg-color: #fafafa;
+@import 'variables';
 
 .guide-section {
     background-color: $CureMD-bg-color;
